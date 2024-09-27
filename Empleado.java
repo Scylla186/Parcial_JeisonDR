@@ -10,6 +10,7 @@ import java.util.ArrayList;
  *
  * @author Daniel
  */
+
 abstract public class Empleado {
     
     ArrayList<Integer>  arraylist = new ArrayList<Integer>();
@@ -35,6 +36,7 @@ abstract public class Empleado {
     }
 
     public void setNombre(String nombre) {
+        
         this.nombre = nombre;
     }
 

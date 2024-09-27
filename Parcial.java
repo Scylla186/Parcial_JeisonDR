@@ -5,6 +5,7 @@
 package com.mycompany.parcial;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -14,6 +15,7 @@ public class Parcial {
 
     public static void main(String[] args) {
         Scanner scan=new Scanner(System.in);
+        String Lista;
         int C_empleados;
         String nombre;
         String apellido;
@@ -26,11 +28,11 @@ public class Parcial {
         int P_Salud=0;
         int P_Pension=0;
         
-        System.out.println("Bienvenido a la calculador por tipo de empleado");
-        System.out.println("Si desea saber su Salario siga con mis intrucciones");
-        System.out.println("De cuantos empleados desea calcular?");
+        JOptionPane.showMessageDialog(null,"Bienvenido a la calculador por tipo de empleado");
+        JOptionPane.showMessageDialog(null,"Si desea saber su Salario siga con mis intrucciones");
+        String C = JOptionPane.showInputDialog( "De cuantos empleados desea calcular?");
         
-         C_empleados = scan.nextInt();
+         C_empleados = Integer.parseInt(C);
          
          
          
@@ -58,8 +60,8 @@ public class Parcial {
              C_Proyectos = scan.nextInt();
              Consultores.setC_Proyectos(C_Proyectos);
              
-             for (x = 1; x <= C_Proyectos; x++){
-                 System.out.println("Cual es el valor de trabajar en el proyecto "+x);
+             for (int y = 1; y <= C_Proyectos; y++){
+                 System.out.println("Cual es el valor de trabajar en el proyecto "+y);
                  S_mod=scan.nextInt();
                  Consultores.setS_mod(S_mod);
                  Consultores.CalcularT_Pagar();
@@ -98,7 +100,9 @@ public class Parcial {
          }
      
          
-         
+          GUI FRAMES = new GUI();
+     FRAMES.setVisible(true);
+    
          
          
          
