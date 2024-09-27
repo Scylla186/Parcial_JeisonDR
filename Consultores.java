@@ -85,11 +85,21 @@ public class Consultores extends Empleado{
 
     public void CalcularT_Pagar() {
         
+    
            
                     T_Pagar += S_mod;
             T_Pagar=T_Pagar;
             this.T_Pagar=T_Pagar;
     }
+  
+   
+   public void addString(){
+       arl.add(" nombre: "+nombre+" apellido: "+apellido+" telefono: "+telefono+" codigo: "+codigo+" Total a pagar: "+T_Pagar+" T.Empleado: "+T_empleado+" C.Proyectos: "+C_Proyectos);
+   }
+    
+    public void showString(){
+         System.out.println(""+arl);
+    }  
     
     
     

@@ -13,7 +13,8 @@ import java.util.ArrayList;
 
 abstract public class Empleado {
     
-    ArrayList<Integer>  arraylist = new ArrayList<Integer>();
+    ArrayList<String>  arl = new ArrayList<String>();
+    
     
     public String nombre;
     public String apellido;
@@ -21,6 +22,7 @@ abstract public class Empleado {
     public String codigo;
     public int T_empleado;
     public int T_Pagar;
+    
 
     public Empleado(String nombre, String apellido, String telefono, String codigo, int T_empleado, int T_Pagar) {
         this.nombre = nombre;
@@ -76,15 +78,16 @@ abstract public class Empleado {
         return T_Pagar;
     }
 
-    public abstract void CalcularT_Pagar();
+   public abstract void CalcularT_Pagar();
 
+   public abstract void addString();
+   
+   public abstract void showString();
+       
+   
     
     
-    @Override
-    public String toString() {
-        return "Empleado{" + "arraylist=" + arraylist + ", nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono + ", codigo=" + codigo + ", T_empleado=" + T_empleado + ", T_Pagar=" + T_Pagar + '}';
-    }
-        
+  
     
     
     

@@ -5,7 +5,6 @@
 package com.mycompany.parcial;
 
 import java.util.Scanner;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -15,7 +14,6 @@ public class Parcial {
 
     public static void main(String[] args) {
         Scanner scan=new Scanner(System.in);
-        String Lista;
         int C_empleados;
         String nombre;
         String apellido;
@@ -28,11 +26,13 @@ public class Parcial {
         int P_Salud=0;
         int P_Pension=0;
         
-        JOptionPane.showMessageDialog(null,"Bienvenido a la calculador por tipo de empleado");
-        JOptionPane.showMessageDialog(null,"Si desea saber su Salario siga con mis intrucciones");
-        String C = JOptionPane.showInputDialog( "De cuantos empleados desea calcular?");
         
-         C_empleados = Integer.parseInt(C);
+        
+        System.out.println("Bienvenido a la calculador por tipo de empleado");
+        System.out.println("Si desea saber su Salario siga con mis intrucciones");
+        System.out.println("De cuantos empleados desea calcular?");
+        
+         C_empleados = scan.nextInt();
          
          
          
@@ -68,8 +68,8 @@ public class Parcial {
              }
               
                  System.out.println("Su sueldo total es: "+Consultores.getT_Pagar());
-                 
-                 
+                 Consultores.addString();
+                 Consultores.showString();
         
              } else if (T_empleado == 2){ 
                  Planta Planta = new Planta( P_Salud, P_Pension, S_mod, nombre, apellido, telefono, codigo, T_empleado, T_Pagar);
@@ -90,24 +90,18 @@ public class Parcial {
                  System.out.println("Pension: "+Planta.getPorc_Pension());
                  System.out.println("Salud:   "+Planta.getPorc_Salud());
                  
-                 
-                 
+                 Planta.addString();
+                 Planta.showString();
              }
-             
-             
+
              
              
          }
-     
-         
-          GUI FRAMES = new GUI();
-     FRAMES.setVisible(true);
+
     
          
-         
-         
-         
     }
+    
     }
 
  

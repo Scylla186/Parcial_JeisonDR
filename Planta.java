@@ -96,5 +96,12 @@ public class Planta extends Empleado{
         this.T_Pagar = S_mod-(Porc_Salud+Porc_Pension);
     }
 
-    
+
+   
+   public void addString(){
+       arl.add(" nombre: "+ nombre+" apellido: "+apellido+" telefono: "+telefono+" codigo: "+codigo+" T.Pagar: "+T_Pagar+" T.Empleado: "+T_empleado+" % Pension: "+Porc_Pension+" % Salud: "+Porc_Salud);
+   }
+    public void showString(){
+         System.out.println(""+arl);
+    }  
 }
